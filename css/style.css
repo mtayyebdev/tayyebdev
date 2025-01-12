@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+body::-webkit-scrollbar{
+  display: none;
+} */
+
+.icon_shadow{
+  box-shadow: 1px 1px 10px 0px rgba(8, 8, 202, 0.651);
+}
+
+
+
+/* #about{
+  transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
+} */

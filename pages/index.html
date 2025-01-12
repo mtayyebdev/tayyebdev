@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta auther="Tayyeb Dev" title="Tayyeb Dev Portfolio Site" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              smsm: "415px", // Custom breakpoint for 374px
+            },
+            colors: {
+              site_color: "#18E17D",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "Pzl7j3GHMpcreSWOe",
+        });
+      })();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Tayyeb Dev</title>
+  </head>
+  <body>
+    <main class="w-full bg-gray-900">
+      <!-- header ....................................... -->
+      <header
+        id="header"
+        class="header flex items-center z-[50] backdrop-blur justify-between py-5 sticky top-0 px-5 sm:px-10"
+      >
+        <div class="logo">
+          <a href="#" id="logo">
+            <h2 class="text-xl smsm:text-2xl font-bold text-white">
+              Tayyeb Dev
+            </h2>
+          </a>
+        </div>
+        <nav class="nav-bar">
+          <ul class="flex items-center font-semibold text-white">
+            <div
+              id="navbar"
+              class="hidden transition-all duration-300 md:flex w-[300px] pt-16 p-7 md:pt-0 md:p-0 md:w-auto shadow-xl md:shadow-none shadow-black/75 md:bg-transparent h-screen md:h-auto right-0 bg-gray-500 flex-col top-0 absolute md:static md:flex-row md:items-center md:text-sm lg:text-base gap-5 md:gap-6 lg:gap-10"
+            >
+              <i
+                class="fa-solid block md:hidden fa-close text-2xl cursor-pointer hover:text-site_color p-1 absolute right-5 top-3"
+                id="navbarClose"
+              ></i>
+              <a href="#portfolio">
+                <li class="group relative flex items-center">
+                  <i class="fa-regular fa-user text-sm me-3"></i>
+                  <div class="flex flex-col">
+                    <p>Portfolio</p>
+                    <div
+                      class="w-0 group-hover:w-[65px] top-6 left-0 transition-all duration-300 absolute mt-0.5 h-1 bg-site_color"
+                    ></div>
+                  </div>
+                </li>
+              </a>
+              <a href="#about">
+                <li class="group flex relative items-center">
+                  <i class="fa-regular fa-user text-sm me-3"></i>
+                  <div class="flex flex-col">
+                    <p>About Me</p>
+                    <div
+                      class="w-0 group-hover:w-[70px] top-6 left-0 transition-all duration-300 absolute mt-0.5 h-1 bg-site_color"
+                    ></div>
+                  </div>
+                </li>
+              </a>
+              <a href="#contact">
+                <li class="group flex relative items-center">
+                  <i class="fa-regular fa-user text-sm me-3"></i>
+                  <div class="flex flex-col">
+                    <p>Contact</p>
+                    <div
+                      class="w-0 group-hover:w-[60px] top-6 left-0 transition-all duration-300 absolute mt-0.5 h-1 bg-site_color"
+                    ></div>
+                  </div>
+                </li>
+              </a>
+            </div>
+            <a href="#contact">
+              <button
+                class="px-2 smsm:px-4 text-sm lg:text-base lg:px-7 py-1 smsm:py-1.5 lg:py-2 bg-white rounded-lg transition-all duration-300 ms-7 text-black lg:ms-10 hover:bg-site_color transition-all hover:text-white"
+              >
+                Visit GitHub
+              </button>
+            </a>
+            <i
+              class="fa-solid ms-3 block md:hidden text-xl fa-bars smsm:text-2xl cursor-pointer hover:text-site_color p-1"
+              id="navbarOpen"
+            ></i>
+          </ul>
+        </nav>
+      </header>
+      <div class="max-w-[1400px] mx-auto bg-gray-900">
+        <!-- hero sec...............................-->
+        <section
+          class="hero px-5 smsm:px-10 lg:px-16 py-10 md:py-5 bg-gray-900 md:h-screen flex flex-col md:flex-row md:items-center md:justify-between"
+        >
+          <div class="left w-full md:w-[60%] lg:w-[65%] xl:w-[70%] text-white">
+            <div id="hero_heading">
+              <h3 class="text-lg -ms-1 lg:-ms-0">Hey, I am</h3>
+              <div class="flex items-center">
+                <h1
+                  class="text-[3rem] sm:text-[4rem] lg:text-[5rem] font-bold -mt-4 sm:-mt-5 lg:-mt-7 -ms-1.5"
+                >
+                  M Tayyeb👋
+                </h1>
+              </div>
+            </div>
+            <div
+              class="w-[150px] sm:w-[180px] mt-2 h-1 bg-site_color"
+              id="hero_line"
+            ></div>
+            <p class="w-full md:w-[400px] lg:w-[500px] mt-4" id="hero_left">
+              Passionate web developer specializing in dynamic, user-friendly
+              websites. With expertise in the MERN stack and modern web
+              technologies, I create innovative solutions that deliver seamless
+              user experiences. Let’s bring your ideas to life!
+            </p>
+            <div id="hero_btn">
+              <button
+                class="px-7 py-2 mt-5 bg-white rounded-lg transition-all duration-300 text-black hover:bg-site_color hover:text-white font-semibold transition-all"
+              >
+                Get My Resume
+              </button>
+            </div>
+          </div>
+          <div
+            class="right w-full md:w-[40%] lg:w-[35%] xl:w-[30%] mt-8 md:mt-0 flex items-center justify-center"
+            id="hero_right"
+          >
+            <img
+              src="../public/tayyeb.png"
+              class="w-[300px] smsm:w-[400px] md:w-[350px] md:-ms-8 lg:-ms-0 xl:w-[350px] max-w-[350px]"
+              alt="Tayyeb Dev"
+            />
+          </div>
+        </section>
+
+        <!-- <section id="statistic" class="bg-white py-10 px-16">
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-gray-900"
+              >
+                2.7K
+              </h2>
+              <p class="leading-relaxed">Users</p>
+            </div>
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-gray-900"
+              >
+                1.8K
+              </h2>
+              <p class="leading-relaxed">Subscribes</p>
+            </div>
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-gray-900"
+              >
+                35
+              </h2>
+              <p class="leading-relaxed">Downloads</p>
+            </div>
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-gray-900"
+              >
+                4
+              </h2>
+              <p class="leading-relaxed">Products</p>
+            </div>
+          </div>
+        </section> -->
+
+        <!-- about sec.................................. -->
+        <section
+          id="about"
+          class="px-5 box smsm:px-10 lg:px-16 py-16 bg-gray-100"
+        >
+          <div
+            class="flex flex-col md:flex-row md:justify-evenly md:items-start lg:items-center"
+          >
+            <div
+              class="left w-full md:w-[40%] lg:w-[30%] flex items-center justify-center"
+            >
+              <img
+                src="../public/tayyeb.png"
+                class="w-[250px] h-[250px] smsm:w-[300px] smsm:h-[300px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full border-[10px] border-site_color"
+                alt="TayyebDev"
+              />
+            </div>
+            <div class="right w-full md:w-[60%] mt-8 md:mt-0">
+              <h1
+                class="sm:text-3xl h1-title text-2xl font-medium title-font mb-4 text-gray-900"
+              >
+                About Me
+              </h1>
+              <div class="w-[80px] line h-1 bg-site_color mb-4 -mt-2"></div>
+              <div class="about-desc">
+                <p class="leading-relaxed text-base">
+                  I'm Muhammad Tayyeb, a passionate web developer with a focus
+                  on creating high-quality, user-friendly
+                  <b
+                    >e-commerce websites, portfolio sites, and web
+                    applications</b
+                  >. I specialize in the MERN stack (MongoDB, Express.js,
+                  React.js, and Node.js), enabling me to build
+                  <b>full-stack solutions</b> that are both visually appealing
+                  and highly functional.
+                </p>
+                <p class="leading-relaxed text-base">
+                  My expertise extends to <b>front-end development</b> with a
+                  strong foundation in HTML, CSS, JavaScript, and Tailwind CSS.
+                  I also excel in <b>UI/UX design</b>, utilizing Figma to craft
+                  intuitive and visually engaging user interfaces.
+                </p>
+                <p class="leading-relaxed text-base">
+                  I'm driven to deliver exceptional results and continuously
+                  strive to stay updated with the latest
+                  <b>web development technologies and best practices</b>.
+                </p>
+                <p class="leading-relaxed text-base">
+                  <b
+                    >I'm particularly interested in collaborating with startups
+                    and small businesses to help them achieve their online
+                    goals.</b
+                  >
+                </p>
+                <p class="leading-relaxed text-base">
+                  Let's connect and discuss how I can contribute to your next
+                  exciting project.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <p>
+              <!-- another........... -->
+            </p>
+          </div>
+        </section>
+
+        <!-- portfolio sec........................................ -->
+        <section
+          id="portfolio"
+          class="px-5 box smsm:px-10 lg:px-16 bg-white py-16"
+        >
+          <div class="flex flex-col text-center items-center w-full mb-12">
+            <h1
+              class="sm:text-3xl text-2xl h1-title font-medium title-font mb-4 text-gray-900"
+            >
+              My Work
+            </h1>
+            <div class="w-[80px] line h-1 bg-site_color mb-4 -mt-2"></div>
+            <p class="lg:w-2/3 p-desc mx-auto leading-relaxed text-base">
+              Explore my portfolio to see the projects I've worked on. From
+              dynamic websites to custom web applications, each project
+              showcases my passion for web development and commitment to
+              delivering high-quality solutions.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
+            id="project-container"
+          ></div>
+        </section>
+        <div
+          id="project-dev"
+          class="hidden items-center justify-center top-0 z-[51] left-0 w-full h-screen bg-white/25 backdrop-blur-md"
+        >
+          <i
+            id="close-project"
+            class="fa-solid fa-close text-3xl font-bold hover:text-red-500 cursor-pointer absolute right-4 top-4 md:right-8 md:top-8"
+          ></i>
+          <img
+            src=""
+            id="img-project"
+            class="w-[90%] sm:w-[80%] xl:w-[90%] h-[80%]"
+            alt="project image"
+          />
+        </div>
+
+        <!-- skills sec.............................................. -->
+        <section
+          id="skills"
+          class="px-5 box smsm:px-10 lg:px-16 bg-gray-100 py-16"
+        >
+          <div class="flex flex-col text-center items-center w-full mb-12">
+            <h1
+              class="sm:text-3xl h1-title text-2xl font-medium title-font mb-4 text-gray-900"
+            >
+              My Expertise
+            </h1>
+            <div class="w-[100px] line h-1 bg-site_color mb-4 -mt-2"></div>
+            <p class="lg:w-2/3 skills-desc mx-auto leading-relaxed text-base">
+              I'm dedicated to providing my clients with top-notch web
+              development solutions that are both functional and visually
+              appealing. Contact me to learn how I can help you grow your online
+              presence.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div
+              class="rounded-[18px] border border-[#EAEFF5] skills-card bg-white px-5 py-10 shadow-[0px_80px_50px_-32px_rgba(107,110,148,0.04)]"
+            >
+              <div class="relative">
+                <div class="mb-5">
+                  <img
+                    src="../public/mernicon.jpg"
+                    class="w-[55px] h-[55px] rounded-full icon_shadow"
+                    alt=""
+                  />
+                </div>
+                <h3
+                  class="mb-4 text-xl font-bold tracking-[-1.2px] text-black sm:text-2xl lg:text-xl 2xl:text-[22px]"
+                >
+                  Full-Stack Mastery
+                </h3>
+                <p class="text-base leading-[1.5] text-body-color">
+                  Proficient in developing robust and scalable web applications
+                  using the MERN stack (MongoDB, Express.js, React, Node.js). I
+                  specialize in creating dynamic and interactive user interfaces
+                  with clean, well-structured code.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-[18px] skills-card border border-[#EAEFF5] bg-white px-5 py-10 shadow-[0px_80px_50px_-32px_rgba(107,110,148,0.04)]"
+            >
+              <div class="relative">
+                <div class="mb-5">
+                  <img
+                    src="../public/ui-uxicon.jpg"
+                    class="w-[55px] h-[55px] rounded-full icon_shadow"
+                    alt=""
+                  />
+                </div>
+                <h3
+                  class="mb-4 text-xl font-bold tracking-[-1.2px] text-black sm:text-2xl lg:text-xl 2xl:text-[22px]"
+                >
+                  UI/UX Design
+                </h3>
+                <p class="text-base leading-[1.5] text-body-color">
+                  I specialize in creating visually stunning and user-friendly
+                  interfaces using Figma. I focus on user research, information
+                  architecture, and design systems to deliver intuitive and
+                  engaging digital experiences.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-[18px] skills-card border border-[#EAEFF5] bg-white px-5 py-10 shadow-[0px_80px_50px_-32px_rgba(107,110,148,0.04)]"
+            >
+              <div class="relative">
+                <div class="mb-5">
+                  <img
+                    src="../public/wordpressicon.jpg"
+                    class="w-[55px] h-[55px] rounded-full icon_shadow"
+                    alt=""
+                  />
+                </div>
+                <h3
+                  class="mb-4 text-xl font-bold tracking-[-1.2px] text-black sm:text-2xl lg:text-xl 2xl:text-[22px]"
+                >
+                  WordPress Sites
+                </h3>
+                <p class="text-base leading-[1.5] text-body-color">
+                  I develop custom WordPress websites tailored to your specific
+                  business needs. I focus on clean code, SEO optimization, and
+                  ensuring a smooth user experience across all devices.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-[18px] skills-card border border-[#EAEFF5] bg-white px-5 py-10 shadow-[0px_80px_50px_-32px_rgba(107,110,148,0.04)]"
+            >
+              <div class="relative">
+                <div class="mb-5">
+                  <img
+                    src="../public/responsiveicon.png"
+                    class="w-[55px] h-[55px] rounded-full icon_shadow"
+                    alt=""
+                  />
+                </div>
+                <h3
+                  class="mb-4 text-xl font-bold tracking-[-1.2px] text-black sm:text-2xl lg:text-xl 2xl:text-[22px]"
+                >
+                  Responsive Design
+                </h3>
+                <p class="text-base leading-[1.5] text-body-color">
+                  I create websites that look amazing on all devices, from
+                  desktops and laptops to tablets and smartphones. I ensure a
+                  consistent and enjoyable user experience across all screen
+                  sizes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- contact sec............................................. -->
+        <section
+          id="contact"
+          class="px-5 box smsm:px-10 lg:px-16 bg-white text-gray-600 py-16"
+        >
+          <div class="">
+            <div class="flex flex-col text-center items-center w-full mb-12">
+              <h1
+                class="sm:text-3xl h1-title text-2xl font-medium title-font mb-4 text-gray-900"
+              >
+                Contact Me
+              </h1>
+              <div class="w-[100px] line h-1 bg-site_color mb-4 -mt-2"></div>
+              <p
+                class="lg:w-2/3 mx-auto contact-desc leading-relaxed text-base"
+              >
+                Feel free to contact me for any project inquiries,
+                collaborations. I'd be happy to connect and discuss how we can
+                work together.
+              </p>
+            </div>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto">
+              <div class="flex flex-wrap -m-2">
+                <div class="p-2 c-field w-full sm:w-1/2">
+                  <div class="relative">
+                    <label for="name" class="leading-7 text-sm text-gray-600"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    />
+                  </div>
+                </div>
+                <div class="p-2 c-field w-full sm:w-1/2">
+                  <div class="relative">
+                    <label for="email" class="leading-7 text-sm text-gray-600"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    />
+                  </div>
+                </div>
+                <div class="p-2 c-field w-full">
+                  <div class="relative">
+                    <label
+                      for="userType"
+                      class="leading-7 text-sm text-gray-600"
+                      >Who are you?</label
+                    >
+                    <select
+                      id="userType"
+                      name="userType"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    >
+                      <option value="" disabled selected>
+                        Select your role
+                      </option>
+                      <option value="programmer">Programmer</option>
+                      <option value="client">Client</option>
+                      <option value="business-owner">Business Owner</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="p-2 c-field w-full">
+                  <div class="relative">
+                    <label for="message" class="leading-7 text-sm text-gray-600"
+                      >Message</label
+                    >
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="p-2 c-btn w-full flex justify-center">
+                  <button
+                    id="form_submit"
+                    class="px-10 py-3 mt-5 text-lg bg-blue-600 rounded-full transition-all duration-300 text-white hover:bg-blue-700 group hover:text-white font-semibold"
+                  >
+                    Submit
+                    <i
+                      class="fa-solid fa-arrow-right ms-1 group-hover:translate-x-3 transition-all duration-300"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+              <div id="email_message"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- testamonials sec................................. -->
+        <section
+          id="testamonials"
+          class="px-5 box smsm:px-10 lg:px-16 py-24 bg-gray-100"
+        >
+          <div>
+            <div class="flex flex-col text-center items-center w-full mb-12">
+              <h1
+                class="sm:text-3xl h1-title text-2xl font-medium title-font mb-4 text-gray-900"
+              >
+                Testimonials
+              </h1>
+              <div class="w-[100px] h-1 line bg-site_color mb-4 -mt-2"></div>
+              <p class="lg:w-2/3 mx-auto test-desc leading-relaxed text-base">
+                Here’s what people are saying about working with me. Honest
+                feedback from clients, collaborators, and partners.
+              </p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+              <div class="p-4 test-card1 md:w-1/2 w-full">
+                <div class="h-full bg-gray-200 p-8 rounded">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="block w-5 h-5 text-gray-400 mb-4"
+                    viewBox="0 0 975.036 975.036"
+                  >
+                    <path
+                      d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                    ></path>
+                  </svg>
+                  <p class="leading-relaxed mb-6">
+                    As a small business owner, I needed a website that was both
+                    professional and user-friendly. TayyebDev not only created a
+                    beautiful and functional website but also patiently guided
+                    me through the process, explaining every step along the way.
+                    They were a true problem-solver and I highly recommend their
+                    services.
+                  </p>
+                  <a class="inline-flex items-center">
+                    <img
+                      alt="testimonial"
+                      src="../public/user.png"
+                      class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                    />
+                    <span class="flex-grow flex flex-col pl-4">
+                      <span class="title-font font-medium text-gray-900"
+                        >Sarah Jones</span
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4 test-card2 md:w-1/2 w-full">
+                <div class="h-full bg-gray-200 p-8 rounded">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="block w-5 h-5 text-gray-400 mb-4"
+                    viewBox="0 0 975.036 975.036"
+                  >
+                    <path
+                      d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                    ></path>
+                  </svg>
+                  <p class="leading-relaxed mb-6">
+                    TayyebDev exceeded all my expectations. They were incredibly
+                    responsive to my requests and kept me informed throughout
+                    the entire project. The final website is exactly what I
+                    envisioned and has already started generating leads. I'm
+                    incredibly grateful for their expertise and professionalism.
+                  </p>
+                  <a class="inline-flex items-center">
+                    <img
+                      alt="testimonial"
+                      src="../public/user.png"
+                      class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                    />
+                    <span class="flex-grow flex flex-col pl-4">
+                      <span class="title-font font-medium text-gray-900"
+                        >David Lee</span
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- footer............................ -->
+    <footer>
+      <div
+        class="bg-gray-900 py-7 px-5 smsm:px-10 flex items-center flex-wrap smsm:flex-nowrap justify-center smsm:justify-between gap-6 smsm:gap-3 text-white"
+      >
+        <h2 class="text-xl md:text-2xl font-bold">Tayyeb Dev</h2>
+        <div class="flex items-center text-sm md:text-base">
+          &copy;
+          <p id="year"></p>
+          <p class="ms-1">TayyebDev</p>
+        </div>
+        <div class="flex items-center gap-4 text-base md:text-xl text-gray-300">
+          <a href="#">
+            <i class="fa-brands fa-facebook hover:text-white"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-github hover:text-white"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-linkedin hover:text-white"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- script............................. -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
