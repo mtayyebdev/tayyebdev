@@ -32,19 +32,19 @@ year_box.innerHTML = today.getFullYear();
 // logic for portfolio sec....................................
 let projects_data = [
   {
-    image: "../public/project1.jpg",
+    image: "./public/project1.jpg",
     title: "Shop Creator",
   },
   {
-    image: "../public/project2.png",
+    image: "./public/project2.png",
     title: "E Commerce Store",
   },
   {
-    image: "../public/project3.jpg",
+    image: "./public/project3.jpg",
     title: "Space Stories",
   },
   {
-    image: "../public/project4.jpg",
+    image: "./public/project4.jpg",
     title: "AI Site Developer",
   },
 ];
