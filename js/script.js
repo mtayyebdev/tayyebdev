@@ -97,12 +97,15 @@ const email = document.getElementById("email");
 const message = document.getElementById("message");
 const userType = document.getElementById("userType");
 const email_message = document.getElementById("email_message");
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 formBtn.addEventListener("click", () => {
-  console.log(username.value, email.value, message.value, userType.value);
-
   if (!username.value || !email.value || !message.value || !userType.value) {
-    return (email_message.innerHTML = `<p class="text-yellow-600 mt-1 text-lg">Warning: Please fill all fields...</p>`);
+    return (email_message.innerHTML = `<p class="text-yellow-600 mt-1 text-lg">Warning: Please fill all fields.</p>`);
+  }
+
+  if (!emailRegex.test(email.value)) {
+    return (email_message.innerHTML = `<p class="text-yellow-600 mt-1 text-lg">Warning: Invalid Email.</p>`);
   }
 
   // Send email using EmailJS
@@ -127,6 +130,18 @@ formBtn.addEventListener("click", () => {
         console.log("FAILED...", error);
       }
     );
+});
+
+//  download cv logic...........................................
+const downloadCV = document.getElementById("downloadCV");
+
+downloadCV.addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.href = "../public/Muhammad_Tayyeb.pdf";
+  link.download = "Muhammad_Tayyeb_CV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 });
 
 // GSAP animation logic.............................................
