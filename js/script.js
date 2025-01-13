@@ -100,6 +100,7 @@ const email_message = document.getElementById("email_message");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 formBtn.addEventListener("click", () => {
+  email_message.innerHTML = `<p class="text-green-600 mt-1 text-lg">Loading...</p>`
   if (!username.value || !email.value || !message.value || !userType.value) {
     return (email_message.innerHTML = `<p class="text-yellow-600 mt-1 text-lg">Warning: Please fill all fields.</p>`);
   }
