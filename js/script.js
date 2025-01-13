@@ -60,6 +60,7 @@ projects_data.map(
           src="${data.image}"
           class="w-full h-[250px] project cursor-pointer"
           alt=""
+          loading="lazy"
         />
         <div class="p-2">
           <h2 class="text-xl font-semibold">${data.title}</h2>
@@ -98,6 +99,7 @@ const message = document.getElementById("message");
 const userType = document.getElementById("userType");
 const email_message = document.getElementById("email_message");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let loading = false;
 
 formBtn.addEventListener("click", () => {
   if (!username.value || !email.value || !message.value || !userType.value) {
@@ -109,6 +111,12 @@ formBtn.addEventListener("click", () => {
   }
 
   // Send email using EmailJS
+  loading = true;
+  if (loading) {
+    email_message.innerHTML = `<p class="text-green-600 mt-1 text-lg">Loading...</p>`;
+  } else {
+    email_message.innerHTML = `<p class="text-yellow-600 mt-1 text-lg"></p>`;
+  }
   emailjs
     .send("service_d0ris9i", "template_qoqjf8y", {
       name: username.value,
@@ -124,10 +132,12 @@ formBtn.addEventListener("click", () => {
         email.value = "";
         message.value = "";
         userType.value = "";
+        loading = false;
       },
       function (error) {
         email_message.innerHTML = `<p class="text-red-600 mt-1 text-lg">Error: Failed to send email. Please try again.</p>`;
         console.log("FAILED...", error);
+        loading = false;
       }
     );
 });
