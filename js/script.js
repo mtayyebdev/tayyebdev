@@ -148,7 +148,7 @@ const downloadCV = document.getElementById("downloadCV");
 
 downloadCV.addEventListener("click", () => {
   const link = document.createElement("a");
-  link.href = "../public/Muhammad_Tayyeb.pdf";
+  link.href = "../public/Muhammad Tayyeb.pdf";
   link.download = "Muhammad_Tayyeb_CV.pdf";
   document.body.appendChild(link);
   link.click();
@@ -527,3 +527,13 @@ testmonial.from(
   },
   "test-card"
 );
+
+let cursor_pointer=document.getElementById("cursor");
+document.addEventListener("mousemove",(e)=>{
+  gsap.to(cursor_pointer,{
+    x:e.x,
+    y:e.y,
+    ease: "elastic.out(1,0.3)"
+  })
+  
+})
